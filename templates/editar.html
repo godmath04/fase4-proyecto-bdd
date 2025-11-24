@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Editar: {{ catequizado[1] }} {{ catequizado[2] }}</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/editar/{{ catequizado[0] }}">
+                    
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label">Nombres:</label>
+                            <input type="text" class="form-control" name="nombres" value="{{ catequizado[1] }}" required>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Apellidos:</label>
+                            <input type="text" class="form-control" name="apellidos" value="{{ catequizado[2] }}" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cédula:</label>
+                        <input type="text" class="form-control" name="documentoIdentidad" value="{{ catequizado[4] }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Fecha de Nacimiento:</label>
+                        <input type="date" class="form-control" name="fechaNacimiento" value="{{ catequizado[3] }}" required>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success btn-lg">Guardar Cambios</button>
+                        <a href="/lista" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

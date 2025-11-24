@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="mb-0">Registrar Nuevo Catequizado</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/registro">
+                    
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="nombres" class="form-label">Nombres:</label>
+                            <input type="text" class="form-control" name="nombres" required>
+                        </div>
+                        <div class="col">
+                            <label for="apellidos" class="form-label">Apellidos:</label>
+                            <input type="text" class="form-control" name="apellidos" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="documentoIdentidad" class="form-label">Documento de Identidad (Cédula):</label>
+                        <input type="text" class="form-control" name="documentoIdentidad" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento:</label>
+                        <input type="date" class="form-control" name="fechaNacimiento" required>
+                    </div>
+
+                    <div class="alert alert-light border">
+                        <small class="text-muted">
+                            * Se asignará automáticamente a la <strong>Familia ID: 1</strong>.<br>
+                            * El estado inicial de Fe de Bautismo será <strong>"No Entregado"</strong>.
+                        </small>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Guardar Registro</button>
+                        <a href="/lista" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
