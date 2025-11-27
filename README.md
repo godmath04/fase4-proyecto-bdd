@@ -10,6 +10,7 @@ Proyecto desarrollado como parte de la **Fase 4 del Proyecto Integrador**.
 * **Luis Pineda**
 
 ## 🚀 Funcionalidades
+* **Autenticación (Login):** Sistema de seguridad de gestión de sesiones Flask-Login. Protege el acceso a las rutas internas
 * **Conexión a Base de Datos:** Uso de `pyodbc` para conectar Python con SQL Server.
 * **Listado (READ):** Visualización de personas registradas en la tabla `Catequizado`.
 * **Registro (CREATE):** Formulario para ingresar nuevos alumnos.
@@ -17,11 +18,11 @@ Proyecto desarrollado como parte de la **Fase 4 del Proyecto Integrador**.
 * **Eliminación (DELETE):** Borrado lógico o físico de registros.
 
 ## 🛠️ Tecnologías Utilizadas
-* **Lenguaje:** Python 3.10+
+* **Lenguaje:** Python 3.12+
 * **Framework Web:** Flask
 * **Base de Datos:** Microsoft SQL Server (Express Edition)
 * **Driver:** ODBC Driver 17 for SQL Server
-* **Frontend:** HTML5 + Bootstrap 5
+* **Frontend:** HTML5 + Jinja2 Templates + Bootstrap 5
 
 ## 📋 Requisitos Previos
 Para ejecutar este proyecto necesitas:
@@ -58,3 +59,10 @@ python app.py
 ### 6. Acceder
 
 Abre tu navegador web e ingresa a: http://127.0.0.1:5000
+
+### 7. Credenciales de Acceso (Pruebas)
+
+EL sistema está protegido. Para ingresar y probar el CRUD se utiliza el usuario:
+```bash
+admin_sanjuan | hash_admin
+```
